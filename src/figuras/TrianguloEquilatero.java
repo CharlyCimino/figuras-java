@@ -1,12 +1,12 @@
 package figuras;
 
-public class TrianguloEquilatero {
+// Un TrianguloEquilatero es una FiguraGeometrica                 
+public class TrianguloEquilatero extends FiguraGeometrica {
 
-    private String nombre;
     private int lado;
 
     public TrianguloEquilatero(String nombre, int lado) {
-        this.nombre = nombre;
+        super(nombre); // Se invoca al constructor de la superclase
         this.lado = lado;
     }
 
@@ -18,7 +18,8 @@ public class TrianguloEquilatero {
         return (Math.sqrt(3) / 4) * Math.pow(lado, 2);
     }
     
+    @Override
     public void dibujar() {
-        System.out.println(nombre + ": ▲");
+        System.out.println(super.getNombre() + ": ▲");
     }
 }

@@ -1,13 +1,13 @@
 package figuras;
 
-public class Rectangulo {
+// Un Rectangulo es una FiguraGeometrica                 
+public class Rectangulo extends FiguraGeometrica {
 
-    private String nombre;
     private int base;
     private int altura;
 
     public Rectangulo(String nombre, int base, int altura) {
-        this.nombre = nombre;
+        super(nombre); // Se invoca al constructor de la superclase
         this.base = base;
         this.altura = altura;
     }
@@ -20,7 +20,8 @@ public class Rectangulo {
         return base * altura;
     }
     
+    @Override
     public void dibujar() {
-        System.out.println(nombre + ": █");
+        System.out.println(super.getNombre() + ": █");
     }
 }
