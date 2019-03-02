@@ -12,16 +12,15 @@ public class Principal {
         Circunferencia anillo = new Circunferencia("Anillo",5);
         TrianguloEquilatero flecha = new TrianguloEquilatero("Flecha",3);
         Circunferencia moneda = new Circunferencia("Moneda", 2);
+        
+        Reloj r = new Reloj("R0lex");
 
-        // Todos ellos heredan de FiguraGeometrica, por lo tanto son de tipo FiguraGeometrica
-        FiguraGeometrica[] grupoDeFiguras = {bandera, triangulin, anillo, flecha, moneda};
+        // Todos ellos implementan la interfaz 'Dibujable', por lo tanto pueden dibujarse
+        Dibujable[] grupoDeFiguras = {bandera, triangulin, anillo, flecha, moneda, r};
 
-        // Acá se ve el polimorfismo por herencia en acción
+        // Acá se ve el polimorfismo por interfaces en acción
         for (int i = 0; i < grupoDeFiguras.length; i++) {
             grupoDeFiguras[i].dibujar(); // Cada figura se dibuja como corresponde
-            System.out.println("Área: " + grupoDeFiguras[i].area() ); // Cada figura devuelve su área según la fórmula correspondiente
-            System.out.println("Perímetro: " + grupoDeFiguras[i].perimetro() ); // Cada figura devuelve su área según la fórmula correspondiente
-            System.out.println("");
         }
     }
 }
