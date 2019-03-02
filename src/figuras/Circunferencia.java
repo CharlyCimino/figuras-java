@@ -1,6 +1,5 @@
 package figuras;
-
-// Un Circunferencia es una FiguraGeometrica                 
+               
 public class Circunferencia extends FiguraGeometrica {
 
     private String nombre;
@@ -12,16 +11,18 @@ public class Circunferencia extends FiguraGeometrica {
         this.radio = radio;
     }
 
+    @Override
+    public void dibujar() {
+        System.out.println(super.getNombre() + ": ●");
+    }
+
+    @Override
     public double perimetro() {
         return 2 * Math.PI * radio;
     }
 
+    @Override
     public double area() {
         return Math.PI * Math.pow(radio, 2);
-    }
-    
-    @Override
-    public void dibujar() {
-        System.out.println(super.getNombre() + ": ●");
     }
 }

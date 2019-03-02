@@ -1,6 +1,5 @@
 package figuras;
-
-// Un TrianguloEquilatero es una FiguraGeometrica                 
+             
 public class TrianguloEquilatero extends FiguraGeometrica {
 
     private int lado;
@@ -10,16 +9,18 @@ public class TrianguloEquilatero extends FiguraGeometrica {
         this.lado = lado;
     }
 
+    @Override
+    public void dibujar() {
+        System.out.println(super.getNombre() + ": ▲");
+    }
+
+    @Override
     public double perimetro() {
         return lado * 3;
     }
 
+    @Override
     public double area() {
         return (Math.sqrt(3) / 4) * Math.pow(lado, 2);
-    }
-    
-    @Override
-    public void dibujar() {
-        System.out.println(super.getNombre() + ": ▲");
     }
 }

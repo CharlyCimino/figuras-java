@@ -1,6 +1,7 @@
 package figuras;
 
-public class FiguraGeometrica {
+// Si hay al menos un método abstracto, la clase debe ser abstracta.
+public abstract class FiguraGeometrica {
 
     private String nombre;
 
@@ -12,20 +13,8 @@ public class FiguraGeometrica {
         return nombre;
     }
     
-    public void dibujar() {
-        System.out.println(nombre + ": FiguraGeométrica");
-    }
-        
-    /*
-        Poner aquí los métodos area() y perímetro() no permite saber qué fórmula aplicar. Es demasiado genérico.
-        ¿Existe alguna fórmula general para calcular el perímetro y área de cualquier figura? NO.
-    
-        public double perimetro() {
-            return ¿Cuál fórmula?
-        }
-
-        public double perimetro() {
-            return ¿Cuál fórmula?
-        }
-    */
+    // Un método abstracto es aquel que no puede implementarse por estar en un contexto demasiado genérico. Pero obliga a las subclases a sobreescribirlo
+    public abstract void dibujar();
+    public abstract double perimetro();
+    public abstract double area();
 }

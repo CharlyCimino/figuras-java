@@ -1,6 +1,5 @@
 package figuras;
-
-// Un Rectangulo es una FiguraGeometrica                 
+              
 public class Rectangulo extends FiguraGeometrica {
 
     private int base;
@@ -12,16 +11,18 @@ public class Rectangulo extends FiguraGeometrica {
         this.altura = altura;
     }
 
+    @Override
+    public void dibujar() {
+        System.out.println(super.getNombre() + ": █");
+    }
+
+    @Override
     public double perimetro() {
         return base * 2 + altura * 2;
     }
 
+    @Override
     public double area() {
         return base * altura;
-    }
-    
-    @Override
-    public void dibujar() {
-        System.out.println(super.getNombre() + ": █");
     }
 }
