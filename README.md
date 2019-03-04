@@ -6,7 +6,7 @@ Explicación de los conceptos básicos del paradigma orientado a objetos, utiliz
 
 ## Versiones
 
-El repositorio se encuentra versionado en cuatro partes *(Ver pestaña :bookmark: `releases`)*.
+El repositorio se encuentra versionado en cuatro partes *(Ver pestaña [releases](https://github.com/caemci/figuras-java/releases))*.
 
 ### Versión 1: Encapsulamiento
 
